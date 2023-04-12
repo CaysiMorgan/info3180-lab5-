@@ -16,5 +16,4 @@ class Movies(db.Model):
         self.title = title
         self.description = description
         self.poster = poster
-        time = datetime.now(pytz.timezone('US/Eastern'))
-        self.created_at = time
+        self.created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
